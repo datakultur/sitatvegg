@@ -17,4 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('quote','QuoteController@store')->name('quote.store');
+Route::post('quote/upvote/{quote}', 'UpvoteController@store')->name('upvote.store');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
